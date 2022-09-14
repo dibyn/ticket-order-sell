@@ -20,7 +20,6 @@ const useRequest = ({ url, method, body, onSuccess }) => {
       if (onSuccess) onSuccess(response.data);
       return response.data;
     } catch (error) {
-      console.log(error);
       seterrors(
         <div className="alert alert-danger">
           <h4>Opps...</h4>
