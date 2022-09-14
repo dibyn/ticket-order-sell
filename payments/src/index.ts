@@ -5,6 +5,7 @@ import { OrderCreatedListener } from './Events/listeners/__test__/order-created-
 import { natsWrapper } from './nats-wrapper';
 
 const start = async () => {
+  console.log('Starting payment service...')
   if(!process.env.JWT_KEY) throw new Error("JWT_KEY must be defined");
   if(!process.env.MONGO_URI) throw new Error('MONGO_URI must be defined')
   if(!process.env.NATS_CLIENT_ID) throw new Error('NATS_CLIENT_ID must be defined')
